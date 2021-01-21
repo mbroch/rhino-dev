@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>another test</title>
+		<meta charset="utf-8">
+		<!-- <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> -->
+		<!-- Responsive -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+		<!-- Meta Tags requred for 	Progressive Web App -->
+		<meta name= "apple-mobile-web-app-status-bar" content="#aa7700"> 
+		<meta name="theme-color" content="black"> 
+		<!-- Manifest File link -->
+		<link rel="manifest" href="manifest.json"> 
+		
+		<link rel="stylesheet" href="./themes/orange.min.css" />
+		<link rel="stylesheet" href="./themes/jquery.mobile.icons.min.css" />
+		
+		<link rel="stylesheet" href="./jquery/jquery.mobile.structure-1.4.5.min.css" />
+		<script src="./jquery/jquery-1.11.1.min.js"></script>
+		<script src="./jquery/jquery.mobile-1.4.5.min.js"></script>
+		<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+		<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>  -->
+
+		
+		<style>
+			@font-face {
+				font-family: stranded;
+				src: url(stranded-brk.regular.ttf);
+			}
+
+			* {
+				font-family: stranded;
+			}
+
+			body {
+				margin: 0;
+			}
+			
+			canvas {
+				position: absolute;
+			}
+			#c {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+
+		</style>
+	</head>
+	<body>
+	<!-- MENU JQUERY MOBILE-->	
+	<div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Panel responsive page" data-url="panel-responsive-page1">
+		<div data-role="header">
+			<h1>Rhino</h1>
+	
+		</div><!-- /header -->
+		<div role="main" class="ui-content jqm-content jqm-fullwidth">
+			<h1>Meilleur Pointage !</h1>
+			<span id="score">Antonin: </span>
+			<div data-demo-html="#panel-responsive-page1"></div><!--/demo-html -->
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		
+			<div id="btn" class="ui-btn ui-shadow ui-corner-all ui-mini ui-btn-inline ui-alt-icon ui-nodisc-icon">Jouer</div>
+		</div><!-- /content -->
+	</div>
+	<!-- FIN MENU -->
+		 <canvas id="c"></canvas> 
+		
+		<script src="state.js"></script>
+		<script type="module" src="build/index.bundle.js"></script>
+		<!-- <script type="module" src="game.js"></script> -->
+		<script> 
+			window.addEventListener('load', () => { 
+			registerSW(); 
+			}); 
+		
+			// Register the Service Worker 
+			async function registerSW() { 
+			if ('serviceWorker' in navigator) { 
+				try { 
+				await navigator 
+						.serviceWorker 
+						.register('serviceworker.js'); 
+				} 
+				catch (e) { 
+				console.log('SW registration failed'); 
+				} 
+			} 
+			} 
+		</script>
+		
+	</body>
+</html>
