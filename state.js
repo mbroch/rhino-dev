@@ -1,8 +1,9 @@
 
 "USE STRICT"
 
+const DEBUG = false
 
-let enumStateMachine = { RUN:0, COLLISION:1, MENU:2 }
+let enumStateMachine = { RUN:0, COLLISION:1, MENU:2, PAUSE:3 }
   // débute dans cet état
 let STATE = enumStateMachine.MENU
 
