@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>another test</title>
 		<meta charset="utf-8">
 		<!-- <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> -->
 		<!-- Responsive -->
@@ -47,6 +46,11 @@
 				height: 100%;
 				display: block;
 			}
+			#cmenu {
+				width: 50%;
+				height: 50%;
+				display: block;
+			}
 
 		</style>
 	</head>
@@ -54,7 +58,7 @@
 	<!-- MENU JQUERY MOBILE-->	
 	<div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Jeux des rhinoceros" data-url="panel-responsive-page1">
 		<div data-role="header">
-			<h1>Rhino</h1>
+			<h1>Rhinoceros</h1>
 			<!-- <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a> -->
 		</div><!-- /header -->
 		<div role="main" class="ui-content jqm-content jqm-fullwidth">
@@ -62,20 +66,21 @@
 			<span id="score">Antonin: </span>
 			<div data-demo-html="#panel-responsive-page1"></div><!--/demo-html -->
 			<br>
+			<canvas id="cmenu"></canvas>
 			<br>
 			<br>
 			<br>
 			<br>
 		
-			<div id="btn" class="ui-btn ui-shadow ui-corner-all ui-mini ui-btn-inline ui-alt-icon ui-nodisc-icon">Jouer</div>
+			<div id="btnPlay" class="ui-btn ui-shadow ui-corner-all ui-mini ui-btn-inline ui-alt-icon ui-nodisc-icon">Jouer</div>
 		</div><!-- /content -->
 	</div>
 	<!-- FIN MENU -->
 		 <canvas id="c"></canvas> 
 		
-		<script src="state.js"></script>
+		<script src="./state.js"></script>
 		<script type="module" src="build/index.bundle.js"></script> 
-		<!--<script type="module" src="game.js"></script> -->
+		<!--<script type="module" src="./game.js"></script> -->
 		<script> 
 			window.addEventListener('load', () => { 
 			registerSW(); 
