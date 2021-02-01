@@ -2,6 +2,7 @@
 "USE STRICT"
 
 const DEBUG = false
+const MUSIC_MENU = true
 
 let enumStateMachine = { RUN:0, COLLISION:1, MENU:2, PAUSE:3 }
   // débute dans cet état
