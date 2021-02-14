@@ -4,7 +4,9 @@
 const DEBUG = false
 const MUSIC_MENU = true
 
-let enumStateMachine = { RUN:0, COLLISION:1, MENU:2, PAUSE:3 }
+let enumStateMachine = { RUN:0, COLLISION:1, MENU:2, PAUSE:3, INTRO:4 }
+//let stateIntro = true
+
   // débute dans cet état
 let STATE = enumStateMachine.MENU
 
@@ -12,6 +14,10 @@ let bestScore  = 0
 
 const runAlleyDurationR1R2 = 300 
 const runAlleyDurationR3R4 = 300 
+const rhinoStartPosition = -150
+
+const heroZpos = 30
+const heroYpos = -2
 
 //const enumMenuState = {go:0, stop:1}
 //const enumMainSceneState = {go:0, stop:1}
